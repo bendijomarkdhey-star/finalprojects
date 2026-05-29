@@ -1,6 +1,6 @@
 ﻿namespace finalproject
 {
-    partial class Form2
+    partial class RegitrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,12 +37,12 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.phoneNum = new System.Windows.Forms.TextBox();
+			this.passwordText = new System.Windows.Forms.TextBox();
+			this.confirmpasswordTxt = new System.Windows.Forms.TextBox();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
-			this.button1 = new System.Windows.Forms.Button();
+			this.registrationBtn = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.showPassCheckBx = new System.Windows.Forms.CheckBox();
@@ -102,9 +102,9 @@
 			this.label4.Location = new System.Drawing.Point(366, 312);
 			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(91, 20);
+			this.label4.Size = new System.Drawing.Size(156, 20);
 			this.label4.TabIndex = 3;
-			this.label4.Text = "Number:";
+			this.label4.Text = "Phone Number:";
 			// 
 			// label5
 			// 
@@ -146,30 +146,30 @@
 			this.textBox2.Size = new System.Drawing.Size(298, 26);
 			this.textBox2.TabIndex = 7;
 			// 
-			// textBox3
+			// phoneNum
 			// 
-			this.textBox3.Location = new System.Drawing.Point(370, 338);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(298, 26);
-			this.textBox3.TabIndex = 8;
+			this.phoneNum.Location = new System.Drawing.Point(370, 338);
+			this.phoneNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.phoneNum.Name = "phoneNum";
+			this.phoneNum.Size = new System.Drawing.Size(298, 26);
+			this.phoneNum.TabIndex = 8;
 			// 
-			// textBox4
+			// passwordText
 			// 
-			this.textBox4.Location = new System.Drawing.Point(370, 419);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.PasswordChar = '*';
-			this.textBox4.Size = new System.Drawing.Size(298, 26);
-			this.textBox4.TabIndex = 9;
+			this.passwordText.Location = new System.Drawing.Point(370, 419);
+			this.passwordText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.passwordText.Name = "passwordText";
+			this.passwordText.PasswordChar = '*';
+			this.passwordText.Size = new System.Drawing.Size(298, 26);
+			this.passwordText.TabIndex = 9;
 			// 
-			// textBox5
+			// confirmpasswordTxt
 			// 
-			this.textBox5.Location = new System.Drawing.Point(368, 500);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(298, 26);
-			this.textBox5.TabIndex = 10;
+			this.confirmpasswordTxt.Location = new System.Drawing.Point(368, 500);
+			this.confirmpasswordTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.confirmpasswordTxt.Name = "confirmpasswordTxt";
+			this.confirmpasswordTxt.Size = new System.Drawing.Size(298, 26);
+			this.confirmpasswordTxt.TabIndex = 10;
 			// 
 			// radioButton1
 			// 
@@ -199,18 +199,18 @@
 			this.radioButton2.Text = "Female";
 			this.radioButton2.UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// registrationBtn
 			// 
-			this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.button1.Location = new System.Drawing.Point(456, 640);
-			this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(112, 35);
-			this.button1.TabIndex = 13;
-			this.button1.Text = "Register";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.registrationBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.registrationBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.registrationBtn.Location = new System.Drawing.Point(456, 640);
+			this.registrationBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.registrationBtn.Name = "registrationBtn";
+			this.registrationBtn.Size = new System.Drawing.Size(112, 35);
+			this.registrationBtn.TabIndex = 13;
+			this.registrationBtn.Text = "Register";
+			this.registrationBtn.UseVisualStyleBackColor = true;
+			this.registrationBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label7
 			// 
@@ -247,7 +247,7 @@
 			this.showPassCheckBx.CheckedChanged += new System.EventHandler(this.showPassCheckBx_CheckedChanged);
 			this.showPassCheckBx.TextChanged += new System.EventHandler(this.showPassCheckBx_CheckedChanged);
 			// 
-			// Form2
+			// RegitrationForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -255,12 +255,12 @@
 			this.Controls.Add(this.showPassCheckBx);
 			this.Controls.Add(this.linkLabel1);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.registrationBtn);
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.radioButton1);
-			this.Controls.Add(this.textBox5);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.confirmpasswordTxt);
+			this.Controls.Add(this.passwordText);
+			this.Controls.Add(this.phoneNum);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label6);
@@ -271,7 +271,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.Name = "Form2";
+			this.Name = "RegitrationForm";
 			this.Text = "Form2";
 			this.Load += new System.EventHandler(this.Form2_Load);
 			this.ResumeLayout(false);
@@ -290,13 +290,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox phoneNum;
+		private System.Windows.Forms.TextBox passwordText;
+		private System.Windows.Forms.TextBox confirmpasswordTxt;
+		private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button registrationBtn;
+		private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.CheckBox showPassCheckBx;
 	}

@@ -10,36 +10,15 @@ using System.Windows.Forms;
 
 namespace finalproject
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void linkLabel2_Click(object sender, EventArgs e)
         {
-            Form2 registerForm = new Form2();
+            RegitrationForm registerForm = new RegitrationForm();
             registerForm.Show();
             this.Hide();
         }

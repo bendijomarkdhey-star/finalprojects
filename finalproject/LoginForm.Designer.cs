@@ -1,6 +1,6 @@
 ﻿namespace finalproject
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,6 @@
             this.label1.Size = new System.Drawing.Size(170, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -152,7 +151,6 @@
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "show passwords";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
             // 
             // label6
@@ -177,7 +175,6 @@
             this.linkLabel2.TabIndex = 12;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Sign up";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             this.linkLabel2.Click += new System.EventHandler(this.linkLabel2_Click);
             // 
             // Form1
@@ -200,7 +197,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
