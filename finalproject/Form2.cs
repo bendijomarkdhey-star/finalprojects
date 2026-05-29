@@ -28,5 +28,19 @@ namespace finalproject
             loginForm.Show();
             this.Hide();
         }
-    }
-}
+
+		private void showPassCheckBx_CheckedChanged(object sender, EventArgs e)
+		{
+          textBox4.PasswordChar = showPassCheckBx.Checked ? '\0' : '*';
+         
+            }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+            Form1 login  = new Form1();
+            login.Show();
+            this.Hide();
+
+		}
+	}
+	}
