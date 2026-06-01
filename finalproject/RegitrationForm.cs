@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,31 +37,54 @@ namespace finalproject
 
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+private void button1_Click(object sender, EventArgs e)
+	{
+		string path = Path.Combine(Application.StartupPath, "accounts.txt");
+
+		string phoneNumber = phoneNum.Text;
+		string password = passwordText.Text;
+
+		if (!IsValidPhoneNumber(phoneNumber))
 		{
-			string phoneNumber = phoneNum.Text;
-			string password = passwordText.Text;
-
-			if (!IsValidPhoneNumber(phoneNumber))
-			{
-				MessageBox.Show("Invalid Phone Number (must be 11 digits and start with 09)");
-				return;
-			}
-
-			if (!IsValidPassword(password))
-			{
-				MessageBox.Show("Invalid Password (8-12 chars, must contain letters and numbers)");
-				return;
-			}
-
-			MessageBox.Show("Registration Successful!");
-
-			LoginForm login = new LoginForm();
-			login.Show();
-			this.Hide();
+			MessageBox.Show("Invalid Phone Number (must be 11 digits and start with 09)");
+			return;
 		}
 
-		private bool IsValidPhoneNumber(string phoneNumber)
+		if (!IsValidPassword(password))
+		{
+			MessageBox.Show("Invalid Password (8-12 chars, must contain letters and numbers)");
+			return;
+		}
+
+		if (!File.Exists(path))
+		{
+			File.Create(path).Close();
+		}
+
+		var lines = File.ReadAllLines(path);
+
+		bool exists = lines.Any(line =>
+		{
+			string[] data = line.Split('|');
+			return data[0] == phoneNumber;
+		});
+
+		if (exists)
+		{
+			MessageBox.Show("Phone number already registered!");
+			return;
+		}
+
+		File.AppendAllText(path, phoneNumber + "|" + password + Environment.NewLine);
+
+		MessageBox.Show("Registration Successful!");
+
+		LoginForm login = new LoginForm();
+		login.Show();
+		this.Hide();
+	}
+
+	private bool IsValidPhoneNumber(string phoneNumber)
 		{
 			if (string.IsNullOrWhiteSpace(phoneNumber))
 				return false;
